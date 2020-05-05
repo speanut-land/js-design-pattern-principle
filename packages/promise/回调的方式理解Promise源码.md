@@ -2,7 +2,7 @@
 
 > 前言：
 >
-> ​		一直以来都是只会调用Promise的API，而且调API还是调用axios封装好的Promise，丢人！！！没有真正的去了解过它的原理是如何实现的，自己也看过很多博主实现的Promise，但总觉得用原型链的OOP晦涩难懂。
+> ​		一直以来都是只会调用Promise的API，而且调API还是调用axios封装好的Promise，太丢人了！！！没有真正的去了解过它的原理是如何实现的，自己也看过很多博主实现的Promise，但总觉得用原型链的OOP晦涩难懂。
 
 个人的理解：如果带着观察者模式的想法来理解Promise源码，你就会发现Promise本身其实一种微任务的观察者模式，一个异步任务的完成，`res/rej`的状态回调hook => 通知所有`then()`订阅的promise对象。promise只是将观察者模式运用到微任务。让promise对象能够具有很高的优先级。说到底还是一种解藕的设计模式。
 
@@ -225,7 +225,7 @@ console.log('end');
 + 等待1秒，控制台输出'Timer' ，调用Promise1的resolve函数，向微任务队列添加setResult状态函数，MyPromise使用settimeout模拟微任务队列
 + setResult状态函数根据`res/rej`状态执行handlers中的所有then添加的回调，
 
-Promise类的`catch`和`finally`都是在then上建立的语法糖，具体大家可以更具MDN的定义来实现，还有Promise类的静态方法，可以参考我自己GitHub的实现。
+Promise类的`catch`和`finally`都是在then上建立的语法糖，具体大家可以更具MDN的定义来实现，还有Promise类的静态方法，可以参考我自己[GitHub](https://github.com/speanut-land/js-design-pattern-principle/blob/master/packages/promise/index.ts)的实现。
 
 **不断的沉淀下来，总归会理解一个东西存在的意义。理解了promise的原理之后，去理解其他的底层实现有会一个很好的基础，了解了Promise底层之后，深深的感受到设计模式的强大。**
 
