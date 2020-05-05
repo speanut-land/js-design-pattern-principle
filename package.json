@@ -1,0 +1,23 @@
+{
+  "name": "js-design-pattern-principle",
+  "version": "1.0.0",
+  "description": "The principle of implementing ECMAscript 6, 7, etc. with typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "npm run clean-build-steps && rm -rf dist",
+    "start": "webpack-dev-server --mode development"
+  },
+  "keywords": [],
+  "author": "speanut",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "ts-loader": "^7.0.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
