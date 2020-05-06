@@ -1,6 +1,4 @@
-import Observer from './observer';
-
-class ListComponent extends Observer {
+class ListComponent {
   createHtmlTag(state) {
     return `<ul> ${state.users.map(user => `<li>${user.name}</li>`).join('\n')}`;
   }

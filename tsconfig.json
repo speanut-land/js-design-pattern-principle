@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "paths": {
-      "packages/*": ["./packages/*"]
-    },
     "pretty": true,
     "target": "ESNext",
     "lib": ["ES2015", "ESNext", "DOM"]
