@@ -3,8 +3,7 @@
 ### Todo-List
 
 - [x] Promise
-- [ ] Observer、Proxy、Decorator
+- [x] Observer、Proxy
 - [ ] Eventbus
 - [ ] Two-way binding
 - [ ] LifeCycleHook
-
